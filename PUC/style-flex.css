@@ -1,0 +1,29 @@
+header{
+    background: lightgreen;
+}
+
+.container{
+    background: lightgrey;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+
+.box-noticia{
+    width: 30%;
+    min-width: 300px;
+    padding: 20px;
+}
+.noticia-destaque{
+    flex-grow: 2;
+}
+.note4{
+    order: 1;
+}
+.not1, .not3, .not5{
+    order: 2;
+}
+.not2{
+    order: 3;
+}

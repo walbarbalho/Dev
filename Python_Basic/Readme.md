@@ -3,7 +3,14 @@ Iniciar o projeto Django
 Criar ambiente virtual
 ```
 python -m venv venv
-. venv/scripts/activate
+.venv/scripts/activate
+# Ativando e desativando meu ambiente virtual
+# Windows:
+.\venv\Scripts\activate
+# Linux e Mac:
+source venv/bin/activate
+# Desativar:
+deactivate
 ```
 
 Instalar e iniciar o django
@@ -14,7 +21,6 @@ python manage.py startapp contact #contact é o nome do app - comando para criar
 ```
 
 Configurar o git
-
 ```
 git config --global user.name 'Seu nome'
 git config --global user.email 'seu_email@gmail.com'
@@ -24,17 +30,27 @@ git init
 git add .
 git commit -m 'Mensagem'
 git remote add origin URL_DO_GIT
+# Para mandar as atualizações para o servidor remoto
+git push
+```
+
+Arquivo Requiriments
+```
+# Lista no terminal os pacotes Python instalados no seu ambiente
+pip freeze
+# Gerar o arquivo
+pip freeze > requirements.txt
+# Para instalar os arquivos
+pip install -r requirements.txt
 ```
 
 Migrando a base de dados do Django
-
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
 
 Criando e modificando a senha de um super usuário Django
-
 ```
 python manage.py createsuperuser
 python manage.py changepassword USERNAME

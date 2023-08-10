@@ -1,7 +1,16 @@
+Instalações em geral
+-- Python: usar a opção personalizada e mandar instalar para todos os usuários e criar variáveis de ambiente
+-- Rancher: desmarcar a opção do Kubernets
+
 Iniciar o projeto Django
 
 Criar ambiente virtual
 ```
+# Para ver onde o Python está instalado
+gcm python -Syntax ou gcm python
+# Mostra qual Python está sendo utilizado
+which pyhton
+# Criar
 python -m venv venv
 .venv/scripts/activate
 # Ativando e desativando meu ambiente virtual
@@ -11,6 +20,11 @@ python -m venv venv
 source venv/bin/activate
 # Desativar:
 deactivate
+# PowerShell - se ocorrer algum problema ao habilitar o ambiente virtual
+# Abrir o PowerShell como administrador
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+# Para visualisar
+Get-ExecutionPolicy -List
 ```
 
 Instalar e iniciar o django
@@ -32,6 +46,8 @@ git commit -m 'Mensagem'
 git remote add origin URL_DO_GIT
 # Para mandar as atualizações para o servidor remoto
 git push
+# Para buscar as alterações do servidor remoto
+git pull
 ```
 
 Arquivo Requiriments
@@ -44,18 +60,31 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
-Migrando a base de dados do Django
+Instalações à parte
 ```
-python manage.py makemigrations
-python manage.py migrate
+# Rancher
+https://github.com/rancher-sandbox/rancher-desktop/releases
+# GetText Static
+https://mlocati.github.io/articles/gettext-iconv-windows.html
 ```
 
-Criando e modificando a senha de um super usuário Django
+Migrando a base de dados do Django
+```
+# Gerencia as mudanças na estrutura do banco de dados de uma aplicação
+python manage.py migrate
+# Analisa se foram feitas mudanças nos modelos
+python manage.py makemigrations
+# Para criar o menu
+python -m aperam.crm.eb3.frontend.manage sitetree_resync_apps
+```
+
+Criando e modificando a senha de um super usuário Django - FrontEnd
 ```
 python manage.py createsuperuser
 python manage.py changepassword USERNAME
+# Para rodar a aplicação
+python manage.py runserver
 ```
-
 Trabalhando com o model do Django
 
 ```python

@@ -76,6 +76,8 @@ python manage.py migrate
 python manage.py makemigrations
 # Para criar o menu
 python -m aperam.crm.eb3.frontend.manage sitetree_resync_apps
+# Para gerar os arquivos de tradução
+python manage.py compilemessagess
 ```
 
 Criando e modificando a senha de um super usuário Django - FrontEnd

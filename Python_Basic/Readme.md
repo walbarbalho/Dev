@@ -32,6 +32,13 @@ $ git clone --recurse-submodules http://10.247.234.89/automacao/asa-1500/eb3.git
 $ cd eb3/framework
 $ git submodule foreach --recursive git checkout master
 $ git submodule foreach --recursive git pull
+
+# Após o clone instalar o poetry
+pip install poetry==1.5.1
+# Cria o amebiente virtual
+poetry install
+# Novo comando para gerar todas as tabelas do banco e já criar usuários
+python manage.py init
 ```
 
 Instalar e iniciar o django

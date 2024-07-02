@@ -26,6 +26,13 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 # Para visualisar
 Get-ExecutionPolicy -List
 ```
+Git clone
+```
+$ git clone --recurse-submodules http://10.247.234.89/automacao/asa-1500/eb3.git
+$ cd eb3/framework
+$ git submodule foreach --recursive git checkout master
+$ git submodule foreach --recursive git pull
+```
 
 Instalar e iniciar o django
 ```

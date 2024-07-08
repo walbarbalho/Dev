@@ -33,6 +33,9 @@ $ cd eb3/framework
 $ git submodule foreach --recursive git checkout master
 $ git submodule foreach --recursive git pull
 
+# Pasta do Framework
+# http://10.247.234.89/automacao/asa-1500/framework.git
+
 # Após o clone instalar o poetry
 pip install poetry==1.5.1
 # Cria o amebiente virtual

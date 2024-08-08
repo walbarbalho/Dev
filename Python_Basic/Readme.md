@@ -45,6 +45,7 @@ python manage.py init
 ```
 Se houver alterações no Framework
 ```
+# Quando alterar/criar módulos
 poetry update
 # Se persistirem problemas pode tentar esse comando
 git submodule foreach --recursive git pull

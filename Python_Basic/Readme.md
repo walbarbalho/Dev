@@ -43,7 +43,12 @@ poetry install
 # Novo comando para gerar todas as tabelas do banco e já criar usuários
 python manage.py init
 ```
-
+Se houver alterações no Framework
+```
+poetry update
+# Se persistirem problemas pode tentar esse comando
+git submodule foreach --recursive git pull
+```
 Instalar e iniciar o django
 ```
 pip install django
